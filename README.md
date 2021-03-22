@@ -43,7 +43,7 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).                   
-  Closure is nesting functions where parent functions are accesible by the child functions.
+  Closure is nesting functions where parent functions are accesible by the child functions. It defines the inner scope of the lexical scope.
 
 2. Study the following code, then answer the questions below.
 
@@ -66,8 +66,11 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+  Inside the function personalDice() there is a new function(). That is the closure.
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+  Dan's name and the string would remain the same only the random number between 1-6 would change.
 c. What is the lexical scope of `newRoll`? 
+  newRoll has no local variables.
 
 
 ### Task 3 - Stretch Goals
