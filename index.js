@@ -37,9 +37,11 @@ processFirstItem(['foo','bar'], addStrings);
     C1 is working in function scope while C2 is using global variables.
   
   2. Which of the two uses a closure? How can you tell?
+    C1 is using a closure at line 49 by calling the function counter.
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+     C1 would be preferable in almost all scenarios to avoid global variables overriding code and causing bugs.
 */
 
 // counter1 code
@@ -69,9 +71,13 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(){
+
+    const score = Math.floor(Math.random()*3);
+  return score;
 }
+
+console.log(inning());
 
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
