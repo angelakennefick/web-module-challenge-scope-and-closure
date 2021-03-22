@@ -94,24 +94,71 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(inning, number){
-    const object = {
-    Home: inning()*number,
-    Away: inning()*number,
-  }
-  return object;
+;
+
+function finalScore(inning, length){
+var arrHome = [];
+var arrAway = [];
+for(let i = 0; i <length; i++){
+  arrHome.push(inning([i]));
+  arrAway.push(inning([i]));
+} 
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+   const object = {
+   Home: arrHome.reduce(reducer),
+   Away: arrAway.reduce(reducer),
 }
+   return object;
+}
+
 console.log(finalScore(inning, 9));
+
+
+
+// function finalScore(inning, length){
+  
+  //   const object = {
+  //   Home: inning()*number,
+  //   Away: inning()*number,
+  // }
+//  
+
+    // for(let i = 0; i < length; i++) inning(i);
+
+//    if (number < 10){
+//      i+(inning())
+//    }
+//       if([i] === 9){
+//      const object = {
+//      Home: inning()*number,
+//      Away: inning()*number,
+//   }
+//   }
+//   return object;
+// }
+// }
+   
+// console.log(finalScore(inning, 9));
+//  var total = nums.reduce(function(a,b) {
+//     return (+a)+(+b);
+// });
+   
+
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
   1. Receive a callback function - you will pass in the inning function from task 2 as your argument 
   2. Return an object with a score for home and a score for away that populates from invoking the inning callback function */
 
-function getInningScore(/*Your Code Here */) {
-  /*Your Code Here */
+function getInningScore(inning) {
+  const object = {
+    Home: inning(),
+    Away: inning(),
+  }
+  return object;
 }
-
+console.log(getInningScore(inning));
 
 /* ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
 Use the scoreboard function below to do the following:
